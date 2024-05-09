@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "pyxelFont";
+  src: url("../fonts/Press_Start_2P/PressStart2P-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Estiliza a cor do texto do input preenchido automaticamente */
+input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(255, 116, 0) 0%, rgb(255, 158, 78) 77%);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  justify-content: flex-start;
+  width: 350px;
+  min-height: 350px;
+  border-radius: 30px;
+  background: white;
+  padding: 0 10px 20px;
+}
+form h1 {
+  width: 100%;
+  margin: 10px 0 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(255, 158, 78);
+  border-bottom: 2px solid rgb(255, 158, 78);
+}
+form div.input-text-container {
+  position: relative;
+  width: 80%;
+  border-bottom: 2px solid rgb(255, 158, 78);
+  margin: 10px 0;
+}
+form div.input-text-container input {
+  width: 100%;
+  background: none;
+  color: rgb(255, 158, 78);
+  padding: 5px;
+}
+form div.input-text-container label {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: rgb(255, 158, 78);
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: text;
+  transition: 0.3s ease;
+}
+form div.input-text-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgb(255, 158, 78);
+}
+form div.input-text-container i.fa-eye, form div.input-text-container i.fa-eye-slash {
+  cursor: pointer;
+}
+form div.input-text-container.selected label {
+  bottom: 100%;
+  left: 5px;
+}
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 20px;
+  margin: 5px 0;
+  background: white;
+  transition: 0.2s ease;
+}
+form button:hover {
+  filter: brightness(0.9);
+}
+form button input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+form button.orange {
+  background: linear-gradient(90deg, rgb(255, 116, 0) 0%, rgb(255, 158, 78) 77%);
+}
+form button.orange input {
+  color: white;
+}
+form button.orange i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 24px;
+  transform: translateY(-50%);
+  color: white;
+}
+form button.without-bg {
+  border: 3px solid linear-gradient(90deg, rgb(255, 116, 0) 0%, rgb(255, 158, 78) 77%);
+}
+form button.without-bg input {
+  color: rgb(255, 158, 78);
+}
+form a.have-account {
+  margin: 10px 0;
+  color: rgb(255, 158, 78);
+  transition: 0.2s ease;
+}
+form a.have-account:hover {
+  color: rgb(255, 116, 0);
+}/*# sourceMappingURL=form.css.map */

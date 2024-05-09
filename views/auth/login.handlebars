@@ -1,13 +1,31 @@
 <form action="/login" method="POST">
-    <h2>Faça Login</h2>
-    <div class="input-text-container">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu Email">
-    </div>
-    <div class="input-text-container">
-        <label for="password">Senha:</label>
-        <input type="password" name="password" id="password" placeholder="Digite seu Nome">
-    </div>
-    <input type="submit" value="Enviar">
-        <p class="aviso">Não tem conta? <a href="/register">Clique aqui</a></p>
+  <h1>Login</h1>
+  <div class="input-text-container">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" autocomplete="new-password" />
+    <i class="fa-solid fa-envelope"></i>
+  </div>
+  <div class="input-text-container">
+    <label for="password">Senha:</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      autocomplete="new-password"
+    />
+    <i class="fas fa-eye"></i>
+  </div>
+  <button class="orange">
+    <input type="submit" value="Entrar" />
+  </button>
+  <a class="have-account" href="/register">Não tem conta? Registre-se!</a>
+  <button class="orange">
+    <i class="fa-brands fa-google"></i>
+    <input type="submit" value="Entrar com o Google" />
+  </button>
+  <button class="orange">
+    <i class="fa-brands fa-facebook"></i>
+    <input type="submit" value="Entrar com o Facebook" />
+  </button>
 </form>
+<script type="module" src="/js/login.js"></script>

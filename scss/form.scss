@@ -1,0 +1,113 @@
+@import "reset";
+form {
+  @include flexCenter();
+  flex-flow: column;
+  justify-content: flex-start;
+  width: 350px;
+  min-height: 350px;
+  border-radius: 30px;
+  background: white;
+  padding: 0 10px 20px;
+  h1 {
+    width: 100%;
+    margin: 10px 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 40px;
+    font-weight: 700;
+    color: $lightOrange;
+    border-bottom: 2px solid $lightOrange;
+  }
+  div.input-text-container {
+    position: relative;
+    width: 80%;
+    border-bottom: 2px solid $lightOrange;
+    margin: 10px 0;
+    input {
+      width: 100%;
+      background: none;
+      color: $lightOrange;
+      padding: 5px;
+    }
+    label {
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      color: $lightOrange;
+      font-size: 13px;
+      letter-spacing: 2px;
+      cursor: text;
+      transition: 0.3s ease;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      color: $lightOrange;
+      &.fa-eye,
+      &.fa-eye-slash {
+        cursor: pointer;
+      }
+    }
+    &.selected {
+      label {
+        bottom: 100%;
+        left: 5px;
+      }
+    }
+  }
+  button {
+    @include flexCenter();
+    position: relative;
+    width: 80%;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 20px;
+    margin: 5px 0;
+    background: white;
+    transition: 0.2s ease;
+    &:hover {
+      filter: brightness(0.9);
+    }
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  button.orange {
+    background: $orangeGradient;
+    input {
+      color: white;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      font-size: 24px;
+      transform: translateY(-50%);
+      color: white;
+    }
+  }
+  button.without-bg {
+    border: 3px solid $orangeGradient;
+    input {
+      color: $lightOrange;
+    }
+  }
+  a.have-account {
+    margin: 10px 0;
+    color: $lightOrange;
+    transition: 0.2s ease;
+    &:hover {
+      color: $darkOrange;
+    }
+  }
+}
